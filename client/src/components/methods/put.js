@@ -1,5 +1,5 @@
 const updateTodo = (clientData) => {
-  fetch("http://127.0.0.1:3001/todos", {
+  fetch("https://mongodb-ex-react-node-todo-app.herokuapp.com", {
     method: "PUT",
     headers: new Headers({
       Authorization: clientData.cookieValue,

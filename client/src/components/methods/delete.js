@@ -1,5 +1,5 @@
 const deleteTodo = (clientData) => {
-  fetch("https://mongodb-ex-react-node-todo-app.herokuapp.com/failure-auth", {
+  fetch("https://mongodb-ex-react-node-todo-app.herokuapp.com", {
     method: "DELETE",
     headers: new Headers({
       Authorization: clientData.cookieValue,

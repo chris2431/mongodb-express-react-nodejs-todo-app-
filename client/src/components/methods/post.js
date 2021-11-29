@@ -1,5 +1,5 @@
 const postTodo = (clientData) => {
-  fetch("https://mongodb-ex-react-node-todo-app.herokuapp.com/failure-auth", {
+  fetch("https://mongodb-ex-react-node-todo-app.herokuapp.com", {
     method: "POST",
     headers: new Headers({
       Authorization: clientData.cookieValue,
@@ -14,7 +14,7 @@ const postTodo = (clientData) => {
 };
 
 export const loginPost = (userCredentials) => {
-  return fetch("https://mongodb-ex-react-node-todo-app.herokuapp.com/failure-auth", {
+  return fetch("https://mongodb-ex-react-node-todo-app.herokuapp.com", {
     method: "POST",
     headers: {
       "Content-type": "application/json",
@@ -27,7 +27,7 @@ export const loginPost = (userCredentials) => {
 };
 
 export const registerPost = (userCredentials) => {
-  return fetch("https://mongodb-ex-react-node-todo-app.herokuapp.com/failure-auth", {
+  return fetch("https://mongodb-ex-react-node-todo-app.herokuapp.com", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
