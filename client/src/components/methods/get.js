@@ -20,7 +20,7 @@ export const homeGet = () => {
       .split("=")[1];
   }
 
-  return fetch("https://mongodb-ex-react-node-todo-app.herokuapp.com", {
+  return fetch("https://mongodb-ex-react-node-todo-app.herokuapp.com/", {
     method: "GET",
     headers: new Headers({
       Authorization: cookieValue,
