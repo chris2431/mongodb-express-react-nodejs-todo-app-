@@ -1,5 +1,5 @@
 export const dbTasks = (cookieValue) => {
-  return fetch("https://mongodb-ex-react-node-todo-app.herokuapp.com", {
+  return fetch("https://mongodb-ex-react-node-todo-app.herokuapp.com/todos", {
     method: "GET",
     headers: new Headers({
       Authorization: cookieValue,
