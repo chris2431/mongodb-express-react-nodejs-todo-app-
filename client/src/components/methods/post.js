@@ -15,7 +15,6 @@ const postTodo = (clientData) => {
 
 export const loginPost = (userCredentials) => {
   return fetch("https://mongodb-ex-react-node-todo-app.herokuapp.com/login", {
-    mode: "cors",
     method: "POST",
     headers: {
       "Content-type": "application/json",

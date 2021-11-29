@@ -19,7 +19,6 @@ const HomePage = () => {
   // Server call to  know if a user is logged in or needs to register
   useQuery("", () => homeGet().then((res) => res.json()), {
     onSuccess: (data) => {
-      console.log(data);
       // If the user tries to go to / and is already logged in is going to be redirected to /todos otherwise is going to stay in /
       if (data.success === true) {
         navigate("/todos");
