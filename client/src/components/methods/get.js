@@ -20,7 +20,7 @@ export const homeGet = () => {
       .split("=")[1];
   }
 
-  return fetch("http://127.0.0.1:3001", {
+  return fetch("https://mongodb-ex-react-node-todo-app.herokuapp.com/failure-auth", {
     method: "GET",
     headers: new Headers({
       Authorization: cookieValue,
