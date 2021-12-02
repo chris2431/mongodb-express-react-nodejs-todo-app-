@@ -37,6 +37,7 @@ controller.put = async (req, res) => {
   try {
     const username = req.user.username;
     await Todos.updateOne({ username: username, todoname: req.body.todoname, todostatus: "In Progress" }, { todostatus: "Completed" });
+    res.end();
   } catch (err) {
     res.redirect("/");
   }
@@ -46,7 +47,6 @@ controller.put = async (req, res) => {
 controller.delete = async (req, res) => {
   try {
     const username = req.user.username;
-    console.log(req.body, "line 29");
     await Todos.deleteOne({ username: username, todoname: req.body.todoname });
     res.end();
   } catch (e) {
