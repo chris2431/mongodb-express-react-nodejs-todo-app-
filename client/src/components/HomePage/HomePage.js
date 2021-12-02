@@ -26,11 +26,16 @@ const HomePage = () => {
     },
   });
 
+  const date = new Date();
+
+  date.setTime(date.getTime() + 1000 * 60 * 60 * 24);
+
   // Login post
   const mutation = useMutation((userCredentials) => loginPost(userCredentials).then((res) => res.json()), {
     onSuccess: (res) => {
+      console.log(res);
       // Saving the JWT as a cookie
-      document.cookie = `Jwt=${res.token}`;
+      document.cookie = `Jwt=${res.token}; expires=${date}`;
 
       // If the server response for user log in is true then the user is redirected to /todos
       if (res.success === true) {
@@ -43,7 +48,7 @@ const HomePage = () => {
   const { data, mutate, reset } = useMutation((userCredentials) => registerPost(userCredentials).then((res) => res.json()), {
     onSuccess: (res) => {
       // Saving the JWT as a cookie
-      document.cookie = `Jwt=${res.token}`;
+      document.cookie = `Jwt=${res.token}; expires=${date}`;
       if (res.success === true) {
         return navigate("/todos");
       }
